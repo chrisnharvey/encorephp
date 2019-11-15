@@ -1,0 +1,21 @@
+{
+    "name": "chrisnharvey/encorephp",
+    "description": "PHP framework for building command line applications",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Harvey",
+            "email": "chris@chrisnharvey.com"
+        }
+    ],
+    "require": {
+        "symfony/console": "^4.3",
+        "league/container": "^3.3",
+        "symfony/config": "^4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Encore\\": "src/"
+        }
+    }
+}

@@ -29,13 +29,6 @@ abstract class Application extends BaseApplication
     protected $name = 'UNKNOWN';
 
     /**
-     * The application version
-     *
-     * @var string
-     */
-    protected $version = 'UNKNOWN';
-
-    /**
      * Bootstrap the application
      *
      * @return void
@@ -45,7 +38,6 @@ abstract class Application extends BaseApplication
         $this->setDefaultCommand('encore:list');
 
         $this->setName($this->name);
-        $this->setVersion($this->version);
 
         $this->container = $this->container ?? new Container();
     }

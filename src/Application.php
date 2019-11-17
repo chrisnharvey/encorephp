@@ -22,15 +22,6 @@ abstract class Application extends BaseApplication
     public const ENCORE_VERSION = 'dev';
 
     /**
-     * Override default Symfony commands
-     *
-     * @var array
-     */
-    private $commandOverrides = [
-        'help' => 'encore:help'
-    ];
-
-    /**
      * The application name
      *
      * @var string
@@ -66,26 +57,6 @@ abstract class Application extends BaseApplication
      * @return array
      */
     abstract public function commands(): array;
-
-    /**
-     * {@inheritdoc}
-     */
-    public function get($name)
-    {
-        $name = $this->commandOverrides[$name] ?? $name;
-
-        return parent::get($name);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function find($name)
-    {
-        $name = $this->commandOverrides[$name] ?? $name;
-
-        return parent::find($name);
-    }
 
     /**
      * {@inheritdoc}
